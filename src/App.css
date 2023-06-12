@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+.App{
+  text-align:center;
+  height:auto
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav  header ul li a{
+  color:white;
+  text-decoration:none
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav{
+  max-width:100%;
+  background-color:black;
+  height:50px
 }
-
-.App-link {
-  color: #61dafb;
+.nav header {
+  max-width:1000px;
+  margin:auto;
+  height:100%;
 }
+.nav header ul{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:100%
+}
+.nav  header ul li{
+color:white;
+cursor:pointer;
+text-align:center;
+}
+.nav  header ul li:hover a{
+  color:#EC1414
+}
+.active{
+  background-color:#13D678;
+  padding:5px 15px;
+  border-radius:5px
+}
+.homeWrapper,.storeWrapper,.salesWrapper,.receiptsWrapper,.imageViewWrapper,.canWrapper{
+  max-width:1000px;
+  margin:10px auto;
+  height:auto;
+  overflow-y:auto;
+  position:relative
+}
+.salesContainer{
+  background-color:#ddd;
+  border-radius:10px;
+  margin-bottom:20px
+}
+.salesHeaderWrapper{
+  padding:5px 10px;
+  background-color:#13D678;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px
+}
+.salesTableHeader{
+  padding:10px;
+}
+.homeWrapper h3 ,.salesWrapper h3,.receiptsWrapper h3{
+  text-align:start;
+  margin:10px 0
+}
+table{
+  width:100%;
+  text-transform:capitalize
+}
+table tr th {
+  text-decoration:underline
+}
+table th:first-child,table td:first-child{
+  text-align:start
+}
+table th:last-child,table td:last-child{
+  text-align:end;
+}
+.homeWrapper  table td:last-child,.salesWrapper  table td:last-child,.storeWrapper table td:nth-child(3){
+  padding-right:30px
+}
+.storeWrapper table th:nth-child(2),.storeWrapper table td:nth-child(2){
+  text-align:start
+}
+.storeWrapper table th:nth-child(3),.storeWrapper table td:nth-child(3){
+  text-align:end
+}
+.todaySales{
+  max-width:100%;
+  height:auto;
+  display:flex;
+  margin:30px 0;
+  justify-content:flex-end
+}
+.todaySales .sales{
+  display:flex;
+ 
+}
+.todaySales .sales p:first-child{
+  margin-right:10px
+}
+.AddWrapper{
+  max-width:100%;
+  height:auto;
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0
+}
+.inputWrapper{
+  display:flex;
+  justify-content:space-between;
+  width:90%;
+}
+.inputWrapper input,.modalInputWrapper input ,.searchBarWrapper input,.expiryInputs input{
+  outline:none;
+  height:35px;
+  border-radius:5px;
+  border:1px solid #ddd;
+  padding:0 10px
+}
+.inputWrapper input{
+  flex:.3;
+}
+.AddWrapper button{
+ background-color:#13D678;
+}
+.AddWrapper button:hover{
+  background-color:#16D598;
+}
+.closeBook{
+  max-width:100%;
+  height:auto;
+  text-align:end;
+  margin:30px 0
+}
+.closeBook button,.AddWrapper button,.addStockBtnWrapper button ,.expiryWrapper button,.signInbtnWrapper button{
+  padding:10px 20px;
+  border:1px solid #ddd;
+  border-radius:5px;
+  outline:none;
+  cursor:pointer;
+  color:white;
+}
+.closeBook button {
+  background-color:#EC1414;
+}
+.addStockBtnWrapper{
+  max-width:100%;
+  height:auto;
+  text-align:start;
+  margin:15px 0
+}
+.addStockBtnWrapper button{
+  background-color:#13D678;
+  margin-top:10px ;
+  width:100%
+}
+.modalWrapper{
+  max-width:1000px;
+  margin:auto;
+  height:auto;
+  background-color:#e8e8ee;
+  border-radius:5px;
+  padding:15px 10px;
+}
+.input{
+  flex:.5;
+  display:flex;
+  flex-direction:column;
+}
+.modalInputWrapper{
+ display:flex;
+ flex-wrap:wrap ;
+ max-width:100%;
+ justify-content:space-between;
+ gap:10px
+}
+.modalInputWrapper input{
+  width:100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.searchBarWrapper{
+  margin:15px 0;
+  max-width:100%;
+  height:auto;
+}
+.searchBarWrapper input {
+  width:100%;
+  z-index:10;
+}
+.receiptsWrapper,.imageViewWrapper,.canWrapper{
+  background-color:#e8e8ee;
+  border-radius:5px;
+  padding:10px;
+  text-align:start;
+  height:88.8vh;
+  overflow-y:auto
+}
+.receiptsWrapper ul li {
+display :flex;
+justify-content:space-between;
+cursor:pointer;
+padding:5px
+}
+.receiptsWrapper ul li:hover{
+  background-color:#fff;
+  border-radius:5px
+}
+.expiryWrapper{
+  text-align:center;
+  margin:10px 0;
+  max-width:100%;
+}
+.expiryInputs {
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:space-between;
+  margin:15px 0;
+}
+.expiryInputs input{
+  width:30%
+}
+.expiryInputs input:last-child{
+  background-color:#fff;
+  padding-top:6px;
+  box-sizing:border-box
+}
+.expiryWrapper button{
+  background-color:#13D678;
+}
+.receiptsTotolWrapper{
+  max-width:100%;
+  height:auto;
+  display:flex;
+  justify-content:flex-end
+}
+.receiptsTotolWrapper p:first-child{
+  margin-right:10px
+}
+.loginWrapper{
+  max-width:100%;
+  height:99.2vh;
+  position:relative
+}
+.loginWrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+.loginWrapper{
+position:absolute;
+top:0;
+width:100%;
+height:99%;
+display:flex;
+align-items:center;
+justify-content:center
+}
+.signInWapper,.createAccountWapper{
+  width:30%;
+  height:auto;
+  background-color:#fff;
+  border-radius:5px;
+  padding:15px 10px 20px 10px;
+  text-align:start
+}
+.signInWapper a ,.createAccountWapper a{
+  text-decoration:none;
+}
+.signInWapper a:hover ,.createAccountWapper a:hover{
+  color:#EC1414
+}
+.signInWapper h3,.createAccountWapper h3{
+  margin:10px 0
+}
+.signInWapper input,.createAccountWapper input {
+  border:none;
+  outline:none;
+  border-bottom:1px solid #ddd;
+  margin:15px 0;
+  width:100%
+}
+.signInbtnWrapper {
+  width:100%;
+  height:auto;
+  text-align:center;
+  margin-top:15px
+}
+.signInbtnWrapper button{
+  background-color:#13D678;
+}
+.accountlink{
+  margin-top:15px
+}
+.canWrapper table th:nth-child(2){
+  text-align:center;
+}
+.canWrapper table td:nth-child(2){
+  text-align:center;
+}
+.salesTotalWrapper{
+  text-align:start;
+  margin:20px 0
+}
+.totalSalesContainer{
+  text-decoration: underline;
 }
