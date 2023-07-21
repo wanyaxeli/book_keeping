@@ -17,7 +17,7 @@ const SignIn=()=>{
             const{access}=data
             localStorage.setItem('token',access)
             setValues(initialState)
-            navigate('/')
+            navigate('/wrapper')
 
         })
     }

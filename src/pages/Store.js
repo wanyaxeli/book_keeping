@@ -5,20 +5,11 @@ import { useSelector,useDispatch } from "react-redux";
 import SearchBar from "../components/SearchBar";
 import { fetchStock } from "../components/Slices";
 const Store=()=>{
-    const stock = useSelector((state=>state.sales))
-    const[sort,setSort]=useState([])
+    const stock = useSelector(state=>state.sales)
     const dispatch=useDispatch()
-    const sortFunc=()=>{
-        stock.store.stock.sort((a,b)=>{
-             return a.medicine - b.medicine
-         })
-    } 
     useEffect(()=>{
     dispatch(fetchStock())
     },[])
-    //  useEffect(()=>{
-    //  sortFunc()
-    //  },[])
     return(
         <div className="storeWrapper">
           <SearchBar/>

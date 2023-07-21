@@ -13,23 +13,7 @@ export const SaleSlice=createSlice({
         },
         addToStock:(state,action)=>{
             state.store.stock.push(action.payload)
-          },
-        searchItem:(state,action)=>{
-         const searchBar=state.store.stock.filter(item=>{
-            return item.medicine.toLowerCase().includes(action.payload)
-         })
-         console.log(searchBar)
-        },
-        reduceQuantity:(state,action)=>{
-        if(state.store.stock.forEach(item=>item.medicine.includes(action.payload))){
-            const item=state.store.stock.find(item=>item.medicine.toLowerCase()===action.payload)
-            const reducedQuantity=item.quantity -- 
-            return state.store.stock.forEach(item=>item.quantity = reducedQuantity)
-        }else {
-            console.log('item does not exist')
-            return false
-        }
-        }  
+          }
     },
     extraReducers:(builder)=>{
     builder

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './components/Redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import 'font-awesome/css/font-awesome.min.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

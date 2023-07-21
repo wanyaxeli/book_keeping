@@ -10,11 +10,10 @@ function App() {
   const token=localStorage.getItem('token')
   if (token){
     const decodedToken=jwtDecode(token)
-    console.log(decodedToken.exp  * 100)
     if (decodedToken.exp * 1000 <= Date.now()){
       localStorage.removeItem('token')
-      navigate('/login')
       window.location.reload(true)
+      navigate('/')
     }
   }
   },[])
