@@ -1,6 +1,6 @@
 {
   "name": "chemist",
-   "homepage": "http://wanyaxeli.github.io/book_keeping_server",
+   "homepage": "http://wanyaxeli.github.io/book_keeping",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
