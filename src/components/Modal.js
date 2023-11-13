@@ -17,7 +17,7 @@ const Modal=()=>{
         axios.post(url,stock,{headers:{'Content-Type':"application/json",'Authorization':`Bearer ${token}`}})
         .then((res)=>{
             dispatch(fetchStock())
-            return res.data
+            console.log(res.data)
         })
         .catch((error)=>console.log(error))
         setStock(initialState)

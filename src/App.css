@@ -268,6 +268,9 @@ justify-content:center
   padding:15px 10px 20px 10px;
   text-align:start
 }
+.createAccountWapper {
+  width: 40%;
+}
 .signInWapper a ,.createAccountWapper a{
   text-decoration:none;
 }
